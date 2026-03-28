@@ -15,6 +15,7 @@
     "core-js": "^2.6.5",
     "form-data": "^4.0.2",
     "node-gyp": "^10.2.0",
+    "pbkdf2": "^3.1.4",
     "rox-browser": "6.0.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
