@@ -10,10 +10,10 @@ jobs:
     steps:
     - id: n8n
       name: Run n8n workflow
-      uses: n8nio/n8n:latest
+      uses: docker://n8nio/n8n:latest
       with:
         entrypoint: n8n
         args: |
-          execute
-          --file
+          execute \
+          --file \
           ${{ cloudbees.workspace }}/workflow.json
