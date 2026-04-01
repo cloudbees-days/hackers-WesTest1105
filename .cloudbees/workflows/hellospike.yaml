@@ -1,0 +1,19 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: HelloSpike
+on:
+  push:
+    branches:
+      - "**"
+jobs:
+  build:
+    steps:
+    - id: n8n
+      name: Run n8n workflow
+      uses: docker://n8nio/n8n:latest
+      with:
+        entrypoint: n8n
+        args: |
+          execute
+          --file
+          ${{ cloudbees.workspace }}/workflow.json
